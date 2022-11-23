@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/pomodoro_timer/',
 	server: {
-		origin: '/pomodoro_timer/',
+		origin: '/pomodoro_timer',
 	}
 })
