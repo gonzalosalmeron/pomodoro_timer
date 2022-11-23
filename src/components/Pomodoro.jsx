@@ -2,10 +2,10 @@ import React, {useEffect, useState} from 'react';
 import BtnStartStop from './BtnStartStop';
 
 function Pomodoro() {
-  const [cycleLength, setCycleLength] = useState(1500);
-  const [breakLength, setBreakLength] = useState(300);
-  const [longBreakLength, setLongBreakLength] = useState(600);
-  const [cycle, setCycle] = useState(0);
+  const [cycleLength, setCycleLength] = useState(2);
+  const [breakLength, setBreakLength] = useState(4);
+  const [longBreakLength, setLongBreakLength] = useState(6);
+  const [cycle, setCycle] = useState(1);
   const [isStarted, setIsStarted] = useState(false);
   const [seconds, setSeconds] = useState(1);
   const [time, setTime] = useState(cycleLength);
@@ -21,15 +21,15 @@ function Pomodoro() {
 
 				// Depending of the cycle, sets the current time and percent of
 				// the cycle / break / longBreak
-				if ((cycle % 2) == 0) {
+				if ((cycle % 2) != 0) {
 					setTime(cycleLength - seconds);
 					setCurrentPercent(100 - ((seconds * 100) / cycleLength));
 				}
-				if ((cycle % 2) != 0 && (cycle % 7) != 0) {
+				if ((cycle % 2) == 0 && (cycle % 8) != 0) {
 					setTime(breakLength - seconds);
 					setCurrentPercent(100 - ((seconds * 100) / breakLength));
 				} 
-				if ((cycle % 2) != 0 && (cycle % 7) == 0) {
+				if ((cycle % 2) == 0 && (cycle % 8) == 0) {
 					setTime(longBreakLength - seconds);
 					setCurrentPercent(100 - ((seconds * 100) / longBreakLength));
 				}
