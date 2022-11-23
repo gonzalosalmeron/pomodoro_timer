@@ -2,7 +2,7 @@
   "name": "pomodoro_timer",
   "homepage": "https://gonzalosalmeron.github.io/pomodoro_timer/",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
