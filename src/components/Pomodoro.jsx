@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 import BtnStartStop from './BtnStartStop';
 
 function Pomodoro() {
-  const [cycleLength, setCycleLength] = useState(2);
-  const [breakLength, setBreakLength] = useState(4);
-  const [longBreakLength, setLongBreakLength] = useState(6);
+  const [cycleLength, setCycleLength] = useState(1500);
+  const [breakLength, setBreakLength] = useState(300);
+  const [longBreakLength, setLongBreakLength] = useState(600);
   const [cycle, setCycle] = useState(1);
   const [isStarted, setIsStarted] = useState(false);
   const [seconds, setSeconds] = useState(1);

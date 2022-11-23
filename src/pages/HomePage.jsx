@@ -16,7 +16,9 @@ function HomePage() {
 
   function setBg(){
     const background = localStorage.getItem("background");
-    document.getElementById("root").style.backgroundImage = `url('/assets/backgrounds/${background}.gif')`;
+    const url = new URL(`../../public/assets/backgrounds/${background}.gif`, import.meta.url).href
+    console.log(url, 'hola')
+    document.getElementById("root").style.backgroundImage = `url('${url}')`;
   }
 
   return (
